@@ -13,7 +13,7 @@ while p1 < n and p2 < m :
         p1 += 1
     else :
         c.append(b[p2])
-        p2 += 1
+        p2 += 1 
 
 if p1 < n :
     c = c + a[p1:]

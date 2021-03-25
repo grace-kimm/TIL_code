@@ -26,13 +26,15 @@ array = [i*i for i in range(1, 10)] # 1~9까지 수의 제곱값을 포함하는
 array = [[0]*m for _ in range(n)] # n*m 크기의 2차원 리스트 초기화
 array = [i for i in a if i not in remove_set] # a 리스트에서 remove_set에 없는 원소만 저장
 # 리스트 관련 메소드 모음
-array.append() # 원소 하나 삽입
+array.append() # 원소 하나 맨 뒤에 삽입
 array.sort() # 오름차순 정렬
 array.sort(reverse=True) # 내림차순 정렬
 array.reverse() # 리스트의 원소 순서 모두 뒤집기
-array.insert(삽입 위치 인덱스, 삽입 값) # 특정 인덱스 위치에 원소 삽입
+array.insert(삽입 위치 인덱스, 삽입 값) # 특정 인덱스 위치에 원소 삽입: insert(0, 'a')
 array.count('a') # a 원소 개수 세기
 array.remove('a') # a 원소 제거 (가장 앞에 있는 1개)
+array.pop() # 맨 뒤에 있는 원소 제거
+array.pop(0) # 0번째 (맨앞) 원소 제거
 
 # 1-3. 문자열
 a = 'Hello'
