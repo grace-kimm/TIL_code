@@ -7,6 +7,8 @@ print(a//b)
 print(a%b)
 print(a*b)
 print(a**b)
+# 포맷 고정
+print("%.2f" % 5.5) # 소수점 둘째자리까지 보여주기
 
 # 1-2. 리스트
 a = list()

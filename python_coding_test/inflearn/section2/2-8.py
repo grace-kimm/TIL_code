@@ -9,13 +9,14 @@ def reverse(x) :
         x = x // 10
     return res
 
-def isPrime(X) :
+def isPrime(x) :
     if x == 1 :
         return False
-    # 약수는 절반까지만 존재하므로 반만 돌면 됨
+    # 약수는 절반까지만 봐도 존재하는지 알 수 있으므로 반만 돌면 됨
     for i in range(2, x//2+1) :
         if x % i == 0 :
             return False
+    # for 문이 정상적으로 끝났을 때
     else :
         return True
         

@@ -1,5 +1,4 @@
-import sys
-sys.stdin = open("/Users/kakao1/Desktop/AA/2-1/input.txt", "rt")
+# idx 번호를 합으로 사용
 
 n, m = map(int, input().split())
 # index=0은 제외 -> 1부터 시작하게 한다.
