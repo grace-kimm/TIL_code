@@ -40,15 +40,15 @@ from itertools import combinations_with_replacement
 data = ['A', 'B', 'C']
 result = list(combinations_with_replacement(data, 2)) # 2개 뽑는 모든 조합 구하기(중복 허용)
 
-# 3. heapq : 힙 제공(최소힙). 우선순위 큐 기능 구현에 사용
+# 3. heapq : 힙 제공(최소힙). 우선순위 큐 기능 구현(최단경로)에 사용 -> heappush(h, value), heappop(h)
 import heapq
-# 힙 정렬 구현 (오름차순)
+# 최소 힙 : 힙 정렬 구현 (오름차순). 값이 작은 데이터가 먼저 삭제
 def heapsort(iterable) :
     h = []
     result = []
     # 모든 원소를 차례대로 힙에 삽입 : heappush
     for value in iterable :
-        heapq.heappush(h, value)
+        heapq.heappush(h, value) # h 리스트에 value 넣기
     # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기 : heappop
     for i in range(len(h)) :
         result.append(heapq.heappop(h))
@@ -56,7 +56,7 @@ def heapsort(iterable) :
 result = heapsort([1, 3, 5, 7, 9, 0])
 print(result) # [0, 1, 3, 5, 7, 9]
 
-# 최대 힙 & 힙 정렬 (내림차순) 구현
+# 최대 힙 : 힙 정렬 (내림차순) 구현. 값이 큰 데이터가 먼저 삭제
 def heapsort(iterable) :
     h = []
     result = []
@@ -82,7 +82,7 @@ print(bisect_right(a, x)) # 4 (5번째)
 # '정렬된 리스트'에서 '값이 특정 범위에 속하는 원수의 개수' 구하기
 from bisect import bisect_left, bisect_right
 
-# 값이 [left_value, right_value]인 데이터의 개수 반환하는 함수
+# bisect 사용 예시: 값이 [left_value, right_value]인 데이터의 개수 반환하는 함수
 # -1에서 시작하면 RV 포함. 0에서 시작하면 RV 미포함
 def count_by_range(a, left_value, right_value) :
     right_index = bisect_right(a, right_value)

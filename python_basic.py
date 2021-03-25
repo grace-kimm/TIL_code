@@ -25,6 +25,7 @@ array = [i for i in range(20) if i%2 == 1] # 0~19까지 수 중 홀수만 포함
 array = [i*i for i in range(1, 10)] # 1~9까지 수의 제곱값을 포함하는 리스트
 array = [[0]*m for _ in range(n)] # n*m 크기의 2차원 리스트 초기화
 array = [i for i in a if i not in remove_set] # a 리스트에서 remove_set에 없는 원소만 저장
+
 # 리스트 관련 메소드 모음
 array.append() # 원소 하나 맨 뒤에 삽입
 array.sort() # 오름차순 정렬
